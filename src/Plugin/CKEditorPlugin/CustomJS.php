@@ -23,7 +23,7 @@ class CustomJS extends CKEditorPluginBase implements CKEditorPluginInterface, CK
    * Implements \Drupal\ckeditor\Plugin\CKEditorPluginInterface::getDependencies().
    */
   function getDependencies(Editor $editor) {
-    return array();
+    return [];
   }
   /**
    * Implements \Drupal\ckeditor\Plugin\CKEditorPluginInterface::getFile().
@@ -35,7 +35,7 @@ class CustomJS extends CKEditorPluginBase implements CKEditorPluginInterface, CK
    * Implements \Drupal\ckeditor\Plugin\CKEditorPluginInterface::getLibraries().
    */
   function getLibraries(Editor $editor) {
-    return array();
+    return [];
   }
   /**
    * Implements \Drupal\ckeditor\Plugin\CKEditorPluginInterface::isInternal().
@@ -55,7 +55,12 @@ class CustomJS extends CKEditorPluginBase implements CKEditorPluginInterface, CK
   public function getButtons() {
     return array();
   }
-    public function getConfig(Editor $editor) {
-      return array();
-    }
+  /**
+   * {@inheritdoc}
+   */
+  public function getConfig(Editor $editor) {
+    $settings['CustomJS'] = 'modules/custom/csb_ckeditor/plugin/config.js';
+    return array();
+  }
+
 }
