@@ -1,0 +1,10 @@
+name: CKEditor custom settings
+type: module
+description: This plugin add custom js settings
+core: 8.x
+package: CKEditor
+version: VERSION
+libraries:
+  - csb_ckeditor/main
+dependencies:
+  - editor
